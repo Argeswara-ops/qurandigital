@@ -1,26 +1,44 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-brand: #34d399;
+  --color-darkbg: #05080f;
+  --color-card: #0f1522;
+  --color-cardborder: #1e293b;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: var(--color-darkbg);
+  --color-foreground: #ffffff;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-darkbg);
+  color: #ffffff;
+  font-family: var(--font-sans), system-ui, -apple-system, "Segoe UI", sans-serif;
 }
+
+.bg-glow-red {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(153, 27, 27, 0.15) 0%, rgba(0, 0, 0, 0) 70%);
+  top: 20%;
+  left: -10%;
+  z-index: -1;
+}
+
+.bg-glow-blue {
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(30, 58, 138, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+  top: -10%;
+  right: -10%;
+  z-index: -1;
+}
+
+.font-arabic {
+  font-family: var(--font-arabic), serif;
+}
+
